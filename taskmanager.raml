@@ -7,6 +7,7 @@
   /users:
     /register:
       post:
+        description: Creates a new user.
         responses:
               201:
                 body:
@@ -31,25 +32,37 @@
                           ]
     /login:
       post:
+        description: User logs in to the system, which returns a JWT if the login is successful.
 
   /tasks:
     post:
+      description: Creates a new task.
     get:
     /{id}:
       put:
+        description: Updates an existing task with `taskId = {id}`.
       get:
-        description: Get the task with `taskId = {id}`
+        description: Get a single task with `taskId = {id}`.
+      delete:
+        description: Deletes an existing task with `taskId = {id}`.
     /users:
-      get:
+      /{id}
+        get:
+          description: Get all tasks associated with a user with `userId = {id}`.
 
   /notes:
     post:
+      description: Create a new note against an existing task.
     get:
+      description: Get all task notes.
     /{id}:
       put:
+        description: Update an existing task note with `noteId = {id}`
       get:
-        description: Get the note with `noteId = {id}`
+        description: Get a single note with `noteId = {id}`
       delete:
+        description: Delete an existing note for a given task with `noteId = {id}`
     /tasks:
       /{id}
         get:
+          description: Gets all notes for a given `taskId = {id}`.
