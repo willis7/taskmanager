@@ -1,0 +1,55 @@
+#%RAML 1.0
+  ---
+  title: taskmanager API
+  baseUri: http://api.e-bookmobile.com/{version}
+  version: v1
+
+  /users:
+    /register:
+      post:
+        responses:
+              201:
+                body:
+                  application/json:
+                    example: |
+                      "data": [
+                          {
+                            "user": "some@email.com",
+                            "token": "550e8400e29b41d4a716446655440222"
+                          }
+                          ]
+              500:
+                body:
+                  application/json:
+                    example: |
+                      "data": [
+                          {
+                            "error": "Some Error",
+                            "message": "Invalid User data",
+                            "status": 500
+                          }
+                          ]
+    /login:
+      post:
+
+  /tasks:
+    post:
+    get:
+    /{id}:
+      put:
+      get:
+        description: Get the task with `taskId = {id}`
+    /users:
+      get:
+
+  /notes:
+    post:
+    get:
+    /{id}:
+      put:
+      get:
+        description: Get the note with `noteId = {id}`
+      delete:
+    /tasks:
+      /{id}
+        get:
