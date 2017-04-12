@@ -13,25 +13,21 @@
                 body:
                   application/json:
                     example: |
-                      "data": [
-                          {
+                      "data": {
+                            "id": "55c4bdfd3092110c000001"
                             "firstname": "Sion",
                             "lastname": "Williams",
-                            "email": "some@email.com",
-                            "password": "secret"
+                            "email": "some@email.com"
                           }
-                          ]
               500:
                 body:
                   application/json:
                     example: |
-                      "data": [
-                          {
+                      "data": {
                             "error": "Some Error",
                             "message": "Invalid User data",
                             "status": 500
                           }
-                          ]
     /login:
       post:
         description: User logs in to the system, which returns a JWT if the login is successful.
@@ -40,12 +36,15 @@
                 body:
                   application/json:
                     example: |
-                      "data": [
-                          {
-                            "user": "some@email.com",
-                            "token": "550e8400e29b41d4a716446655440222"
+                      "data": {
+                            "user": {
+                                      "id": "55c4bdfd3092110c000001"
+                                      "firstname": "Sion",
+                                      "lastname": "Williams",
+                                      "email": "some@email.com"
+                                    },
+                            "token": "550e8400e29b41d4a716446655440222..."
                           }
-                          ]
 
   /tasks:
     post:

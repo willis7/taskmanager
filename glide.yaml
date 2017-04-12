@@ -1,0 +1,11 @@
+package: github.com/willis7/taskmanager
+import:
+- package: gopkg.in/mgo.v2
+  subpackages:
+  - bson
+- package: github.com/gorilla/mux
+- package: github.com/dgrijalva/jwt-go
+- package: github.com/codegangsta/negroni
+- package: golang.org/x/crypto
+  subpackages:
+  - bcrypt

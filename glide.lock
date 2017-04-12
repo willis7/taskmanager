@@ -1,0 +1,22 @@
+hash: 3fef874a5281986e89b9a5b9cd84db92ca640dab7b59014390e0342b801358af
+updated: 2016-05-21T12:55:39.755870063+01:00
+imports:
+- name: github.com/codegangsta/negroni
+  version: aac393b02b969df303449ed8ae194a1f8f3b48d6
+- name: github.com/dgrijalva/jwt-go
+  version: 40bd0f3b4891a9d7f121bfb7b8e8b0525625e262
+- name: github.com/gorilla/context
+  version: a8d44e7d8e4d532b6a27a02dd82abb31cc1b01bd
+- name: github.com/gorilla/mux
+  version: 9c19ed558d5df4da88e2ade9c8940d742aef0e7e
+- name: golang.org/x/crypto
+  version: 5bcd134fee4dd1475da17714aac19c0aa0142e2f
+  subpackages:
+  - bcrypt
+- name: gopkg.in/mgo.v2
+  version: b6e2fa371e64216a45e61072a96d4e3859f169da
+  subpackages:
+  - bson
+  - internal/sasl
+  - internal/scram
+devImports: []
